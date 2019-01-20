@@ -1,0 +1,8 @@
+{
+  "cron": "*/15 * * * *",
+  "urls": [{
+    "url": "https://medium.com"
+  }, {
+    "url": "https://demo.ghost.io/"
+  }]
+}

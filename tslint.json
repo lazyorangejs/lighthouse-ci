@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "ordered-imports": false,
+    "semicolon": false,
+    "quotemark": false,
+    "no-var-requires": false,
+    "no-unused-variable": false
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": ["./src/migration/**/*.ts"]
+  }
+}

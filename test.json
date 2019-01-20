@@ -1,0 +1,20 @@
+{
+    "_id": "5c3c798b122a3a45112d0716",
+    "url": "https://medium.com",
+    "accessibility_score": 53,
+    "best_practices_score": 87,
+    "errors_in_console": 0,
+    "estimated_input_latency": 244,
+    "first_cpu_idle": 10752,
+    "first_contentful_paint": 2458,
+    "first_meaningful_paint": 6942,
+    "interactive": 12390.557,
+    "performance_score": 101,
+    "pwa_score": 31,
+    "redirects": 0,
+    "seo_score": 82,
+    "speed_index": 5611,
+    "time_to_first_byte": 349.131,
+    "app_version": "1.1066.0",
+    "created_at": "2019-01-14T13:00:07.126Z"
+}

@@ -1,0 +1,42 @@
+version: '3'
+
+networks:
+  global:
+    external: true
+
+volumes:
+  reports:
+  pg:
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: 'lighthouse-reports'
+      POSTGRES_PASSWORD: postgres
+    ports:
+    - 5432:5432/tcp
+    volumes:
+    - pg:/var/lib/postgresql/data
+    networks:
+      global:
+
+  garie-lighthouse:
+    image: 'garie-lighthouse:latest'
+    build: .
+    labels:
+    - traefik.frontend.rule=Host:lighthouse.lazyorange.xyz
+    - traefik.docker.network=global
+    volumes:
+      - reports:/usr/src/app/reports
+    ports:
+      - 3033:3033
+    environment:
+      - HOST=influxdb
+      - PG_URL=postgres://postgres:postgres@postgres:5432/lighthouse-reports
+    depends_on:
+      - postgres
+    networks:
+      global:
+    command: npm run start:dev
+    restart: always
